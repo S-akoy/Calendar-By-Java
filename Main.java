@@ -23,8 +23,10 @@ public class Main {
         for (int i = 1; i < dayOfWeek; i++) {
             System.out.print("    ");
         }
+       int flag = dayofMonth;
         //loop the day of calendar
-        while (dayofMonth < standard_date.lengthOfMonth()) {
+        while (dayofMonth < standard_date.lengthOfMonth()+1 && flag <= 30) {
+            flag++;
             //Specifiy the format of calendar
             if(standard_date.getDayOfMonth() < 10) {
                 if(standard_date.getDayOfMonth() == day){
@@ -40,7 +42,7 @@ public class Main {
             //Specifiy the format of calendar
             if(standard_date.getDayOfMonth() >= 10) {
                 if(standard_date.getDayOfMonth() == day){
-                    System.out.print(dayofMonth + "*  ");
+                    System.out.print(dayofMonth + "* ");
                 }
                 else
                     System.out.print(dayofMonth + "  ");
